@@ -7,7 +7,9 @@
     "dev": "nuxt dev --host 0.0.0.0 --port 62015",
     "build": "nuxt build",
     "preview": "nuxt preview --port 62015",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "node --import tsx tests/sync-flow.mjs && node --import tsx tests/store-flow.mjs"
   },
   "dependencies": {
     "@nuxtjs/i18n": "^9.5.6",
@@ -25,6 +27,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
+    "tsx": "^4.23.15",
     "typescript": "~5.9.2"
   }
 }

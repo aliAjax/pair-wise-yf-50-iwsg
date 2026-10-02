@@ -1,5 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
+  // 离线现场工具，依赖 localStorage/crypto 且组件库（naive-ui/vueuc）为 CJS，采用纯客户端渲染
+  ssr: false,
   compatibilityDate: "2025-07-15",
   modules: ["@pinia/nuxt", "@vueuse/nuxt", "@nuxtjs/i18n"],
   css: ["~/assets/main.css"],
